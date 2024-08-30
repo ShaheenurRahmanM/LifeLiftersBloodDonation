@@ -1,24 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+//import logo from './logo.svg';
+//import './App.css';
+//import SearchDonors from './components/SearchDonors';
 
+import AppNavbar from './components/Navbar';
+import HomePage from './components/Homepage';
+import DonorRegistration from './components/DonorForm';
+import RecipientForm from './components/RecipientForm';
+import Search from './components/DonorSearch';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <div>
+      <AppNavbar />
+      <HomePage />
+      <DonorRegistration />
+      <RecipientForm />
+      <Search />
+      <h1>Life Lifters - Blood Donation Application</h1>
+      
+      </div>
   );
 }
 

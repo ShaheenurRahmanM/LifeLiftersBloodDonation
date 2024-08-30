@@ -1,0 +1,34 @@
+.navbar-logo {
+    width: 250px;
+    height: 60px;
+    margin-right: 0; 
+    padding-right: 0; 
+    display: inline-block;
+    vertical-align: middle; 
+    border-radius: 10px;
+  }
+  
+  .navbar-brand {
+    display: flex;
+    align-items: center;
+    padding: 0; 
+    
+  }
+
+
+.navbar-custom {
+  background-color: #d22c3a !important; 
+}
+
+/* Custom text color */
+.navbar-custom .navbar-brand, 
+.navbar-custom .nav-link {
+  color: #f8f9fa !important; 
+}
+
+/* Hover effect */
+.navbar-custom .navbar-brand:hover, 
+.navbar-custom .nav-link:hover {
+  color: #090909 !important; 
+}
+
