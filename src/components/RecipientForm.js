@@ -7,19 +7,22 @@ const RecipientForm = () => {
     const form = event.target;
     const formData = new FormData(form);
 
-    const name = formData.get('name').trim();
-    const bloodGroup = formData.get('bloodGroup').trim();
-    const hospitalName = formData.get('hospitalName').trim();
-    const location = formData.get('location').trim();
-    const donationDate = formData.get('donationDate').trim();
+    const data = {
+      name: formData.get('name').trim(),
+      bloodGroup: formData.get('bloodGroup').trim(),
+      unitsRequired: formData.get('unitsrequired').trim(),
+      hospitalName: formData.get('hospitalName').trim(),
+      location: formData.get('location').trim(),
+      donationDate: formData.get('donationDate').trim(),
+    };
 
-    if (!name || !bloodGroup || !hospitalName || !location || !donationDate) {
+    if (!data.name || !data.bloodGroup || !data.unitsRequired || !data.hospitalName || !data.location || !data.donationDate) {
       alert('Please fill in all fields');
       return;
     }
 
     alert('Recipient request created successfully!');
-
+    console.log('Form Data Submitted:', data);
     form.reset();
   };
 
@@ -74,11 +77,11 @@ const RecipientForm = () => {
   };
 
   return (
-    <section style={formContainerStyle}>
+    <section id="recipient-form-section" style={formContainerStyle}>
       <form onSubmit={handleSubmit} style={formStyle}>
         <h2 style={headingStyle}>Recipient Registration</h2>
-        <label style={labelStyle}> Name: <input type="text" name="name" style={inputStyle} /> </label>
-        <label style={labelStyle}> Blood Group:
+        <label style={labelStyle}>Name: <input type="text" name="name" style={inputStyle} /></label>
+        <label style={labelStyle}>Blood Group:
           <select name="bloodGroup" style={inputStyle}>
             <option value="">Select Blood Group</option>
             <option value="A+">A+</option>
@@ -91,13 +94,11 @@ const RecipientForm = () => {
             <option value="O-">O-</option>
           </select>
         </label>
-
-        <label style={labelStyle}>Number of Units required: <input type="number" name="unitsrequired" style={inputStyle}></input> </label>
-        <label style={labelStyle}> Hospital Name:  <input type="text" name="hospitalName" style={inputStyle} /> </label>
-        <label style={labelStyle}> Location: <input type="text" name="location" style={inputStyle} /> </label>
-        <label style={labelStyle}> Blood Needed By: <input type="date" name="donationDate" style={inputStyle} /> </label>
+        <label style={labelStyle}>Number of Units required: <input type="number" name="unitsrequired" style={inputStyle} /></label>
+        <label style={labelStyle}>Hospital Name:  <input type="text" name="hospitalName" style={inputStyle} /></label>
+        <label style={labelStyle}>Location: <input type="text" name="location" style={inputStyle} /></label>
+        <label style={labelStyle}>Blood Needed By: <input type="date" name="donationDate" style={inputStyle} /></label>
         <button type="submit" style={buttonStyle}>Request Blood</button>
-
       </form>
     </section>
   );

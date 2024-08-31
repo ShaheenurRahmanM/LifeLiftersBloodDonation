@@ -20,7 +20,7 @@ const SearchDonors = () => {
     { name: 'Rajesh', bloodType: 'O-', location: 'Thanjavur' },
     { name: 'Rakesh', bloodType: 'B+', location: 'Thiruvarur' },
     { name: 'Ranjeet', bloodType: 'AB-', location: 'Tiruchirappalli' },
-    { name: 'Niranjan', bloodType: 'A+', location: 'Tiruppur' },
+    { name: 'Niranjan P', bloodType: 'O+', location: 'Tirupur' },
     { name: 'Roshan', bloodType: 'A+', location: 'Coimabatore' },
     { name: 'Siva Perumal', bloodType: 'O-', location: 'Chidambaram' },
     { name: 'Mugilan', bloodType: 'B+', location: 'Dharmapuri' },
@@ -33,10 +33,15 @@ const SearchDonors = () => {
     { name: 'Rhenison', bloodType: 'B+', location: 'Tiruchirapalli' },
     { name: 'Sanjay', bloodType: 'AB-', location: 'Krishnagiri' },
     { name: 'Sakthi', bloodType: 'A+', location: 'Salem' },
-    { name: 'Nithish', bloodType: 'A+', location: 'Tiruppur' },
+    { name: 'Nithish', bloodType: 'A+', location: 'Tirupur' },
     { name: 'Ratheesh', bloodType: 'B+', location: 'Kanyakumari' },
     { name: 'Dharshan', bloodType: 'AB-', location: 'Madurai' },
     { name: 'Iniyan', bloodType: 'A+', location: 'Mannarkudi' },
+    { name: 'Vishali', bloodType: 'A+', location: 'Thanjavur' },
+    { name: 'Priyadharshini', bloodType: 'AB+', location: 'Ramnathapuram' },
+    { name: 'Navya', bloodType: 'O-', location: 'Karur' },
+    { name: 'Neela Rathnam', bloodType: 'O+', location: 'Nagercoil' },
+    { name: 'Nashifa', bloodType: 'B+', location: 'Coimbatore' },
     
   ];
 

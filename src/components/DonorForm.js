@@ -22,6 +22,10 @@ const DonorRegistration = () => {
       termsAccepted: formData.get('termsAccepted') === 'on', 
     };
 
+    if (!data.fullName || !data.dob || !data.gender || !data.bloodGroup || !data.state || !data.city || !data.mobileNo || !data.email || !data.donationDate|| !data.password || !data.lastDonation) {
+      alert('Please fill in all fields');
+      return;
+    }
     alert("Registeration Successfull!");
     console.log('Form Data Submitted:', data);
     form.reset();
@@ -103,7 +107,7 @@ const DonorRegistration = () => {
           </label>
           <label style={labelStyle}> Blood Group:
             <select name="bloodGroup" style={selectStyle}>
-              <option value="">-Select Blood Group-</option>
+              <option value="">Select Blood Group</option>
               <option value="A+">A+</option>
               <option value="A-">A-</option>
               <option value="B+">B+</option>
@@ -157,7 +161,7 @@ const DonorRegistration = () => {
           <label style={labelStyle}> City:<input type="text" name="city" style={inputStyle}/></label>
           <label style={labelStyle}> Mobile No: <input type="text" name="mobileNo" style={inputStyle}/></label>
           <label style={labelStyle}>E-mail:<input type="email" name="email" style={inputStyle}/></label>
-          {/* <label style={labelStyle}> Password:<input type="password" name="password" style={inputStyle}/></label> */}
+          <label style={labelStyle}> Password:<input type="password" name="password" style={inputStyle}/></label>
           <label style={labelStyle}>Last Time Blood Donated:
             <select name="lastDonation" style={selectStyle}>
               <option value="Not donated ever">Not donated ever</option>
