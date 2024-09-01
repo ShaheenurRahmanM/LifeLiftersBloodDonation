@@ -17,6 +17,7 @@ const Login = ({ onLogin, switchPage }) => {
     <div style={styles.container}>
       <h2 style={styles.heading}>Login</h2>
       <form onSubmit={handleSubmit} style={styles.form}>
+        <h2 style={styles.heading}>Welcome Back!</h2>
         <div style={styles.formGroup}>
           <label style={styles.label}>Email:</label>
           <input
@@ -49,7 +50,7 @@ const styles = {
   container: {
     height: '100vh',
     width: '100%',
-    backgroundColor: '#f8f9fa', // Light grey background color
+    background: 'linear-gradient(135deg, #00c6ff, #66d9ff, #b3ecff, #66d9ff, #00c6ff)',
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
