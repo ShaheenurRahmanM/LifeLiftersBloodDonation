@@ -22,7 +22,7 @@ const DonorRegistration = () => {
       termsAccepted: formData.get('termsAccepted') === 'on', 
     };
 
-    if (!data.fullName || !data.dob || !data.gender || !data.bloodGroup || !data.state || !data.city || !data.mobileNo || !data.email || !data.donationDate|| !data.password || !data.lastDonation) {
+    if (!data.fullName || !data.dob || !data.gender || !data.bloodGroup || !data.state || !data.city || !data.mobileNo || !data.email || !data.password || !data.lastDonation) {
       alert('Please fill in all fields');
       return;
     }
@@ -120,6 +120,7 @@ const DonorRegistration = () => {
           </label>
           <label style={labelStyle}> State:
             <select name="state" style={selectStyle}>
+              <option value="">Select State</option>
               <option value="Andhra Pradesh">Andhra Pradesh</option>
               <option value="Arunachal Pradesh">Arunachal Pradesh</option>
               <option value="Assam">Assam</option>
